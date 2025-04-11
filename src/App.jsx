@@ -1,5 +1,6 @@
 // DO NOT DELETE
 
+import { useState } from 'react'
 import './App.css'
 
 /**
@@ -7,8 +8,18 @@ import './App.css'
  */
 export const App = () => {
   return (
-    <div>
-      <h2>Hello, world!</h2>
-    </div>
+    <dev>
+      <header>
+        <h1>Dog アプリ</h1>
+      </header>
+      <body>
+        <h2>犬の画像を表示するサイトです</h2>
+        <img src={useState} alt="dog" />
+      </body>
+    </dev>
   )
 }
+
+useState(() => {
+  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/maltese/n02085936_3239.jpg');
+})
