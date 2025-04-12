@@ -1,25 +1,20 @@
 // DO NOT DELETE
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+import { Header } from './Header.jsx'  // Headerコンポーネントをインポート
+import { Description } from "./Description.jsx";
+import { DogListContainer } from "./DogListContainer.jsx";
 
 /**
  * @type {() => JSX.Element}
  */
 export const App = () => {
   return (
-    <dev>
-      <header>
-        <h1>Dog アプリ</h1>
-      </header>
-      <body>
-        <h2>犬の画像を表示するサイトです</h2>
-        <img src={useState} alt="dog" />
-      </body>
-    </dev>
+    <div>
+      <Header />
+      <Description />
+      <DogListContainer />
+    </div>
   )
 }
-
-useState(() => {
-  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/maltese/n02085936_3239.jpg');
-})
